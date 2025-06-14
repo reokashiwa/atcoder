@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+
+int main() {
+  int N, D, P;
+  cin >> N >> D >> P;
+    if ((N < 1) || (N > 2 * 10e5))
+    exit(1);
+  if ((D < 1) || (P > 2 * 10e5))
+    exit(1);
+  if ((P < 1) || (N > 10e9))
+    exit(1);
+  vector<long> F(N);
+  long sum = 0;
+  rep (i, N) {
+    long f;
+    cin >> f;
+    if ((f < 1) || (f > 10e9))
+      exit(1);
+    F[i] = f;
+    sum = sum + f;
+  }
+  sort(F.begin(), F.end());
+  for (int i = N - 1; i >= 0; i++) {
+    
+  }
+}

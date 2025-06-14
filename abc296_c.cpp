@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+
+int main() {
+  int N, X;
+  cin >> N >> X;
+  if ((N < 2) || (N > 2 * 10e5))
+    exit(1);
+  if ((X < -10e9) || (X > 10e9))
+    exit(1);
+
+  vector<int> A(N);
+  rep (i, N) {
+    cin >> A[i];
+    if ((A[i] < -10e9) || (A[i] > 10e9))
+      exit(1);
+  }
+  sort(A.begin(), A.end());
+
+  if (X < 0)
+    X = X * -1;
+  rep (i, N - 1) {
+    for (int j = i; j < N; j++) {
+      if (A[j] - A[i] > X)
+	break;
+      if (A[j] - A[i] == X) {
+	cout << "Yes" << endl;
+	return 0;
+      }
+    }
+  }
+  cout << "No" << endl;
+  return 0;
+}

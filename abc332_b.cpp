@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+
+int main() {
+  int K, G, M;
+  cin >> K >> G >> M;
+  if ((K < 1) || (K > 100))
+    exit(1);
+  if ((G < 1) || (G > 1000))
+    exit(1);
+  if ((M < 1) || (M > 1000))
+    exit(1);
+  if (G >= M)
+    exit(1);
+
+  int g = 0, m = 0;
+  rep (i, K) {
+    if (g == G) {
+      g = 0;
+    } else if (m == 0) {
+      m = M;
+    } else {
+      if (m <= G - g) {
+	g = g + m;
+	m = 0;
+      } else {
+	m = m - (G - g);
+	g = G;
+      }
+    }
+  }
+  cout << g << " " << m << endl;
+  return 0;
+}

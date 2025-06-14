@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+
+int main() {
+  int H, W;
+  cin >> H >> W;
+  if ((H < 1) || (H > 200))
+    exit(1);
+  if ((W < 1) || (W > 200))
+    exit(1);
+  rep (i, H) {
+    string s;
+    cin >> s;
+    if (s.size() != W)
+      exit(1);
+    rep (j, s.size()) {
+      if ((s[j] == '.') || (s[j] == '#') || (s[j] == 'S') || (s[j] == 'T'))
+      else
+	exit(1);
+    }
+  }
+}

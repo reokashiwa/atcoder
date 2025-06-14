@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+
+int main() {
+  int Q;
+  cin >> Q;
+  if ((Q < 1) || (Q > 100))
+    exit(1);
+  int n, xk;
+  vector<int> A;
+  rep (i, Q) {
+    cin >> n >> xk;
+    switch (n) {
+    case 1:
+      A.push_back(xk);
+      break;
+    case 2:
+      cout  << A[A.size() - xk] << endl;
+      break;
+    }
+  }
+}

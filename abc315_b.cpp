@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+
+int main() {
+  int M;
+  cin >> M;
+  if ((M < 1) || (M > 100))
+    exit(1);
+  int sum = 0;
+  vector<int> D(M);
+  rep (i, M) {
+    int d;
+    cin >> d;
+    if ((d < 1) || (d > 100))
+      exit(1);
+    sum = sum + d;
+    D[i] = d;
+  }
+  int half = (sum + 1) / 2;
+  rep (i, M) {
+    if (half <= D[i]) {
+      cout << i + 1 << " " << half << endl;
+      return 0;
+    }
+    else
+      half = half - D[i];
+  }
+  return 0;
+}

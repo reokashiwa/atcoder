@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+
+int main() {
+  int N, K;
+  cin >> N >> K;
+  if ((N < 1) || (N > 2 * 10e5))
+    exit(1);
+  if ((K < 1) || (N > 2 * 10e9))
+    exit(1);
+  set<int> S;
+  rep (i, N) {
+    int a;
+    cin >> a;
+    if ((a < 1) || (a > 2 * 10e9))
+      exit(1);
+    if (a <= K) 
+      S.insert(a);
+  }
+  unsigned long sum;
+  if (K % 2 == 0)
+    sum = (1 + (long) K) * ((long) K / 2);
+  else
+    sum = (1 + (long) K) * ((long) K / 2) + ((long) K + 1) / 2;
+  
+  for (auto value : S)
+    sum = sum - value;
+  cout << sum << endl;
+  return 0;
+}

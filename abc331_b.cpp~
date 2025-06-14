@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+
+int main() {
+  int N, S, M, L;
+  cin >> N >> S >> M >> L;
+  if ((N < 1) || (N > 100))
+    exit(1);
+
+  if ((S < 1) || (S > 10e4))
+    exit(1);
+  if ((M < 1) || (M > 10e4))
+    exit(1);
+  if ((L < 1) || (L > 10e4))
+    exit(1);
+
+  
+}

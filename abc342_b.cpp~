@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+
+int main() {
+  int N;
+  cin >> N;
+  if ((N < 1) || (N > 100))
+    exit(1);
+  vector<int> P(N);
+  rep (i, N) {
+    int p;
+    cin >> p;
+    if ((p < 1) || (p > N))
+      exit(1);
+    rep (j, i) {
+      if (P[j] == p)
+	exit(1);
+    }
+    P[i] = p;
+  }
+  int Q;
+  cin >> Q;
+  if ((Q < 1) || (Q > 100))
+    exit(1);
+  vector<int> A(Q), B(Q);
+  rep (i, Q) {
+    int a, b;
+    cin >> a >> b;
+    if ((a < 1) || (a > N))
+      exit(1);
+    if ((b < 1) || (b > N))
+      exit(1);
+    if (a >= b)
+      exit(1);
+    A[i] = a;
+    B[i] = b;
+  }
+  
+}

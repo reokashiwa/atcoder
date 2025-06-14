@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+
+int main() {
+  long long X, Y, Z;
+  cin >> X >> Y >> Z;
+  if ((X < 1) || (X > 10e9))
+    exit(1);
+  if ((Y < 1) || (Y > 10e9))
+    exit(1);
+  if ((Z < 1) || (Z > 10e9))
+    exit(1);
+  string S;
+  cin >> S;
+  if ((S.size() < 1) || (S.size() > 3 * 10e5))
+    exit(1);
+  bool caps = false;
+  long long total = 0;
+  int rep = 1;
+  rep (i, S.size()) {
+    if ((S[i] != 'A') && (S[i] != 'a'))
+      exit(1);
+
+    if (i < S.size() - 1) {
+      if (S[i] == S[i + 1]) {
+	rep++;
+	continue;
+      }
+    }
+
+    if (S[i] == 'A') {
+      if (caps) {
+	if (X * rep < 
+      }
+    }
+    
+
+  cout << total << endl;
+  return 0;
+}

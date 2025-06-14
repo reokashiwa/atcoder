@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+
+int case() {
+  int N, D, K;
+  cin >> N >> D >> K;
+  vector<int> M(N, 0);
+  int A = 0;
+  K--;
+  rep (i, N) {
+    if (i == 0) {
+      M[0] = 1;
+      
+    
+  }
+}
+
+int main() {
+  int T;
+  cin >> T;
+  rep (i, T) {
+    case();
+  }
+}

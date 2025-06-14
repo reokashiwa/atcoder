@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+
+int main() {
+  long long N;
+  cin >> N;
+  if ((N < 1) || (N > 10e12))
+    exit(1);
+  int b = 0;
+  while (true) {
+    if (N <= 5) {
+      b = 1;
+      break;
+    } else if ((N > pow(5,  * pow(4, b)) && (N <= 5 * pow(4, b + 1))) {
+      
+    }
+  }
+}

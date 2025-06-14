@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+
+int main() {
+  long long A, B;
+  cin >> A >> B;
+  if ((A < 1) || (A > 10e18))
+    exit(1);
+  if ((B < 1) || (B > 10e18))
+    exit(1);
+  if (A % B == 0)
+    cout << A / B << endl;
+  else
+    cout << A / B + 1 << endl;
+  return 0;
+}

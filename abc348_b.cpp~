@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+
+int main() {
+  int N;
+  cin >> N;
+  if ((N < 2) || (N > 100))
+    exit(1);
+  vector<pair<int, int>> XY(N);
+  rep (i, N) {
+    int x, y;
+    cin >> x >> y;
+    if ((x < -1000) || (x > 1000))
+      exit(1);
+    if ((y < -1000) || (y > 1000))
+      exit(1);
+    
+  }
+}

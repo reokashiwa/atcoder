@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+
+int main() {
+  string S;
+  cin >> S;
+  if ((S.size() < 1) || (S.size() > 3 * 10e5))
+    exit(1);
+
+  string B;
+  rep (i, S.size()) {
+    if (S[i] == '(')
+      continue;
+    else if (S[i] == ')') {
+      bool bracket_flag = false;
+      rep (j, i) {
+	if (S[i - j - 1] == '(') {
+	  if (bracket_flag == true)
+	    break;
+	  else
+	    bracket_flag = true;
+	}
+      }
+      rep (k, j - 1) {
+	B.pop_back();
+      }
+    }
+  }
+}

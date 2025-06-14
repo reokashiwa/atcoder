@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+
+int main() {
+  int N;
+  cin >> N;
+  if ((N < 2) || (N > 100))
+    exit(1);
+
+  vector <vector <bool>> A(100, vector <bool> (100, false));
+  rep (i, N) {
+    int a, b, c, d;
+    cin >> a >> b >> c >> d;
+    if ((a < 0) || (a > 100))
+      exit(1);
+    if ((b < 0) || (b > 100))
+      exit(1);
+    if (a >= b)
+      exit(1);
+    if ((c < 0) || (c > 100))
+      exit(1);
+    if ((d < 0) || (d > 100))
+      exit(1);
+    if (c >= d)
+      exit(1);
+
+    for (int j = a; j < b; j++) {
+      for (int k = c; k < d; k++) {
+	A[j][k] = true;
+      }
+    }
+  }
+  int count = 0;
+  rep (i, 100) {
+    rep (j, 100) {
+      if (A[i][j] == true)
+	count ++;
+    }
+  }
+  cout << count << endl;
+}

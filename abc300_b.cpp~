@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+
+int main() {
+  int N, A, B;
+  cin >> N >> A >> B;
+  if ((N < 1) || (N > 300))
+    exit(1);
+  if ((A < 1) || (A > 1000))
+    exit(1);
+  if ((B < 1) || (B > 1000))
+    exit(1);
+  rep (i, N) {
+    int c;
+    cin >> c;
+    if ((c < 1) || (c > 2000))
+      exit(1);
+    if (c == A + B) {
+      cout << i + 1 << endl;
+      return 0;
+    }
+  }
+}

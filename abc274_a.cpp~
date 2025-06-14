@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  int A, B;
+  cin >> A >> B;
+  if ((A < 1) || (A > 10))
+    exit(1);
+  if ((B < 0) || (B > A))
+    exit(1);
+
+  int S;
+  S = 1000 * B / A;
+  if ((1000 * B / A - S) >= 0.5)
+    S = S + 1;
+
+  cout << S;
+}

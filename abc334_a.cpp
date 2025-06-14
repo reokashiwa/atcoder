@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+
+int main() {
+  int B, G;
+  cin >> B >> G;
+  if ((B < 1) || (B > 1000))
+    exit(1);
+  if ((G < 1) || (G > 1000))
+    exit(1);
+  if (B == G)
+    exit(1);
+  if (B < G)
+    cout << "Glove" << endl;
+  else
+    cout << "Bat" << endl;
+  return 0;
+}

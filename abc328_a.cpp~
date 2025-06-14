@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+
+int main() {
+  int N, X;
+  cin >> N >> X;
+  if ((N < 4) || (N > 8))
+    exit(1);
+  if ((X < 100) || (X > 675))
+    exit(1);
+  int sum = 0;
+  rep (i, N) {
+    int s;
+    cin >> s;
+    if ((s < 100) || (s > 675))
+      exit(1);
+    if (s <= X)
+      sum = sum + s;
+  }
+  cout << sum << endl;
+}
