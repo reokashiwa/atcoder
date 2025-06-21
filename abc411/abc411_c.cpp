@@ -39,5 +39,6 @@ int main() {
 	P.push_back(p);
       }
     }
+    
   }
 }
