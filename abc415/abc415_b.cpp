@@ -19,7 +19,7 @@ int main() {
 	cout << endl;
 	flag = false;
       } else {
-	cout << ", ";
+	cout << ",";
 	flag = true;
       }
     }
