@@ -15,12 +15,26 @@ int main() {
       exit(1);
     A[i] = a;
   }
-  int count = 0;
-  rep (i, N) {
-    for (int j = i + 1; j < N; j++) {
-      if (j - i == A[i] + A[j])
-	count ++;
+  map<int, int> counter;
+  for (int i = 1; i < N; i++) {
+    if (i - A[i] > 0) {
+      if (counter.count(i - A[i]))
+	counter[i - A[i]]++;
+      else
+	counter[i - A[i]] = 1;
     }
+  }
+  /*
+  for (pair<int, int> p : counter) {
+    int key = p.first;
+    int value = p.second;
+    cout << key << ": " << value << endl;
+  }
+  */
+  int64_t count = 0;
+  rep (i, N) {
+    if (counter.count(i + A[i]))
+      count = count + counter[i + A[i]];
   }
   cout << count << endl;
 }
