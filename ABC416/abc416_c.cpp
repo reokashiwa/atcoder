@@ -2,6 +2,16 @@
 using namespace std;
 #define rep(i, n) for (int i = 0; i < (int)(n); i++)
 
+int dfs(vector<string>& A, const vector<string>& S, string cur, int count, int K) {
+  if (count == K) {
+    A.push_back(cur);
+    return 0;
+  }
+  rep (i, S.size())
+    dfs(A, S, cur + S[i], count + 1, K);
+  return 0;
+}
+
 int main() {
   int N, K, X;
   cin >> N >> K >> X;
@@ -21,7 +31,10 @@ int main() {
       if ((s[j] < 'a') || (s[j] > 'z'))
 	exit(1);
     }
+    S[i] = s;
   }
-  
-  
+  vector<string> A;
+  dfs(A, S, "", 0, K);
+  sort(A.begin(), A.end());
+  cout << A[X - 1] << endl;
 }
