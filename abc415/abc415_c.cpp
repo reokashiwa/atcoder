@@ -4,11 +4,13 @@ using namespace std;
 
 int case() {
   int N;
-  string S;
   cin >> N;
   if ((N < 1) || (N > 18))
     exit(1);
-  cin >> W;
+  string S;
+  cin >> S;
+  if (S.size() != (int)(pow(2, N) - 1))
+    exit(1);
 }
 
 int main() {
