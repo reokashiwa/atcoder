@@ -39,3 +39,10 @@ Thumbs.db
 # temporary files #
 ###################
 *~
+#~
+.#~
+
+# oj test files #
+#################
+a.out
+*/test
