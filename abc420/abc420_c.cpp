@@ -51,6 +51,6 @@ int main() {
     else
       B[x] = v;
     sum = sum - min(a, b) + min(A[x], B[x]);
-    cout << sum << endl;
+    cout << endl << sumgi;
   }
 }
